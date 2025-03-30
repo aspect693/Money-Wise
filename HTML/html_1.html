@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyWise</title>
+    <link rel="stylesheet" href="/CSS/css.css">
+    <link rel="stylesheet" href="/CSS/calc.css">
+</head>    
+<body>
+    <header>
+        <button class="menu-btn" id="menu-btn">&#9776;</button>
+        <h2><div class="hhm">MoneyWise</div></h2>
+    </header>
+
+    <nav class="side-menu" id="side-menu">
+        <ul>            
+            <li><a href="/index.html">Головна</a></li>
+            <li><a href="/HTML/html_1.html">Калькулятори депозиту </a></li>
+            <li><a href="/HTML/html_2.html">Калькулятор іпотеки та кредиту</a></li>
+            <li><a href="/HTML/valut.html">Валютний калькулятор</a></li>
+        </ul>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="calculator">
+        <h1>Калькулятор депозиту</h1>
+
+        <div class="input-group">
+            <label for="principal">Сума депозиту (грн):</label>
+            <input type="number" id="principal" placeholder="Введіть суму" required>
+        </div>
+
+        <div class="input-group">
+            <label for="interest">Річна процентна ставка (%):</label>
+            <input type="number" id="interest" placeholder="Введіть відсотки" required>
+        </div>
+
+        <div class="input-group">
+            <label for="years">Кількість років:</label>
+            <input type="number" id="years" placeholder="Введіть кількість років" required>
+        </div>
+
+        <div class="input-group">
+            <label for="compoundFrequency">Частота нарахування (для складного процента):</label>
+            <select id="compoundFrequency">
+                <option value="1">Щорічно</option>
+                <option value="4">Щоквартально</option>
+                <option value="12">Щомісячно</option>
+            </select>
+        </div>
+
+        <div class="output">
+            <button class="button1" onclick="calculate()">Розрахувати</button>
+        </div>
+
+        <div id="result">
+            <h2>Результати операції</h2>
+            <p id="simpleOutput">Звичайний процент: </p>
+            <p id="compoundOutput">Складний процент: </p>
+            <h3>Додаткові дані</h3>
+            <p id="simpleInterest">Нараховані відсотки (звичайний): </p>
+            <p id="compoundInterest">Нараховані відсотки (складний): </p>
+            <p id="profit">Вигода (різниця між кінцевою сумою і вкладеною): </p>
+            <p id="totalDeposit">Сума початкового депозиту: </p>
+            <p id="finalAmount">Кінцева сума: </p>
+        </div>
+    </div>
+    <div id="note-window" class="note-window">
+        <div id="note-header" class="note-header">
+            <span>Нотатка</span>
+            <button id="toggle-btn" class="toggle-btn">−</button>
+        </div>
+        <div id="note-content" class="note-content">
+            <textarea id="note-text" placeholder="Напишіть тут ваші нотатки..."></textarea>
+        </div>
+        <div id="resize-handle" class="resize-handle"></div>
+    </div>
+            <!-- Валютний калькулятор
+        <section id="currency">
+            <h2>Валютний калькулятор</h2>
+            <label for="currencyAmount">Сума (у гривнях):</label>
+            <input type="number" id="currencyAmount" placeholder="Введіть суму">
+            <label for="currencySelect">Виберіть валюту:</label>
+            <select id="currencySelect">
+                <option value="USD">Долар США</option>
+                <option value="EUR">Євро</option>
+                <option value="GBP">Фунт стерлінгів</option>
+                <option value="AUD">Австралійський долар</option>
+                <option value="CAD">Канадський долар</option>
+                <option value="CHF">Швейцарський франк</option>
+                <option value="CNY">Китайський юань</option>
+                <option value="JPY">Японська єна</option>
+                <option value="INR">Індійська рупія</option>
+                <option value="MXN">Мексиканське песо</option>
+                <option value="BRL">Бразильський реал</option>
+                <option value="SEK">Шведська крона</option>
+                <option value="NZD">Нова зеландська долар</option>
+                <option value="SGD">Сінгапурський долар</option>
+                <option value="HKD">Гонконгський долар</option>
+                <option value="KRW">Південнокорейська вона</option>
+                <option value="TRY">Турецька ліра</option>
+                <option value="RUB">Російський рубль</option>
+                <option value="PLN">Польський злотий</option>
+                <option value="ZAR">Південноафриканський ранд</option>
+            </select>
+            <button onclick="convertCurrency()">Конвертувати</button>
+            <p id="currencyResult"></p>
+        </section> -->
+    </main>
+
+
+    <aside class="currency-rates" id="currency-rates">
+        <h3>Актуальні курси валют</h3>
+        <ul id="currency-list">
+
+        </ul>
+    </aside>
+
+    <script src="/JS/calc.js"></script>
+    <script src="/JS/index.js"></script>
+</body>
+</html>

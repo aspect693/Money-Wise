@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фінансовий калькулятор</title>
+    <link rel="stylesheet" href="CSS/css.css">
+</head>
+<body>
+
+    <header>
+        <button class="menu-btn" id="menu-btn">&#9776;</button>
+        <h2> <div class="hhm">MoneyWise</div></h2>
+        <h1></h1>
+    </header>
+    
+    <nav class="side-menu" id="side-menu">
+        <ul>            
+            <li><a href="/index.html">Головна</a></li>
+            <li><a href="/HTML/html_1.html">Калькулятори депозиту </a></li>
+            <li><a href="/HTML/html_2.html">Калькулятор іпотеки та кредиту</a></li>
+            <li><a href="/HTML/valut.html">Валютний калькулятор</a></li>
+        </ul>
+    </nav>
+    
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Іпотечний калькулятор</h3>
+                    <p class="description">Цей інструмент допомагає розрахувати ваші щомісячні виплати за іпотечним кредитом. Введіть суму кредиту, відсоткову ставку та строк кредитування, і калькулятор автоматично визначить ваші виплати. Це дозволяє отримати точне уявлення про те, скільки ви будете сплачувати щомісяця та яку загальну суму ви виплатите за весь період кредитування.</p>
+                </div>
+                <div class="card">
+                    <h3>Калькулятор кредиту</h3>
+                    <p class="description">За допомогою цього калькулятора можна легко розрахувати кредитні виплати для будь-якого виду кредиту — споживчого, автомобільного чи іншого. Враховуючи суму позики, відсоткову ставку та термін кредиту, ви отримаєте точний результат про розмір щомісячного платежу і загальні витрати.</p>
+                </div>
+                <div class="card">
+                    <h3>Калькулятор депозиту</h3>
+                    <p class="description">Цей калькулятор допоможе вам обчислити, скільки грошей ви заробите на депозиті за певний період. Враховуються різні варіанти: фіксована ставка, процентна ставка з капіталізацією або без неї. За допомогою цього інструменту ви можете точно розрахувати доходи від ваших заощаджень чи інвестицій.</p>
+                </div>
+                <div class="card">
+                    <h3>Калькулятор складного процента</h3>
+                    <p class="description">Складний процент — це відсотки, що нараховуються не тільки на початкову суму депозиту, але й на нараховані раніше відсотки. Використовуючи цей калькулятор, ви зможете дізнатися, як швидко росте ваш капітал при регулярному нарахуванні процентів і як цей процес працює на вашу вигоду.</p>
+                </div>
+                <div class="card">
+                    <h3>Валютний калькулятор</h3>
+                    <p class="description">Якщо вам необхідно перерахувати одну валюту в іншу, цей калькулятор допоможе вам швидко дізнатися поточний курс валют. Завдяки вбудованому інтерфейсу, ви можете обрати бажану валюту для конвертації та отримати точний курс обміну в реальному часі. Це особливо корисно для тих, хто часто здійснює валютні операції або подорожує за кордон.</p>
+                </div>
+                <div class="card">
+                    <h3>Планування фінансів</h3>
+                    <p class="description">Калькулятор допомагає не тільки розрахувати конкретні фінансові показники, але й сформувати загальне уявлення про ваші витрати та доходи, що важливо для правильного планування бюджету.</p>
+                </div>
+
+            </div>
+        
+
+        <!-- Валютний калькулятор
+        <section id="currency">
+            <h2>Валютний калькулятор</h2>
+            <label for="currencyAmount">Сума (у гривнях):</label>
+            <input type="number" id="currencyAmount" placeholder="Введіть суму">
+            <label for="currencySelect">Виберіть валюту:</label>
+            <select id="currencySelect">
+                <option value="USD">Долар США</option>
+                <option value="EUR">Євро</option>
+                <option value="GBP">Фунт стерлінгів</option>
+                <option value="AUD">Австралійський долар</option>
+                <option value="CAD">Канадський долар</option>
+                <option value="CHF">Швейцарський франк</option>
+                <option value="CNY">Китайський юань</option>
+                <option value="JPY">Японська єна</option>
+                <option value="INR">Індійська рупія</option>
+                <option value="MXN">Мексиканське песо</option>
+                <option value="BRL">Бразильський реал</option>
+                <option value="SEK">Шведська крона</option>
+                <option value="NZD">Нова зеландська долар</option>
+                <option value="SGD">Сінгапурський долар</option>
+                <option value="HKD">Гонконгський долар</option>
+                <option value="KRW">Південнокорейська вона</option>
+                <option value="TRY">Турецька ліра</option>
+                <option value="RUB">Російський рубль</option>
+                <option value="PLN">Польський злотий</option>
+                <option value="ZAR">Південноафриканський ранд</option>
+            </select>
+            <button onclick="convertCurrency()">Конвертувати</button>
+            <p id="currencyResult"></p>
+        </section> -->
+    </main>
+
+    <aside class="currency-rates" id="currency-rates">
+        <h3>Актуальні курси валют</h3>
+        <ul id="currency-list">
+        </ul>
+    </aside>
+
+    <script src="JS/index.js"></script>
+</body>
+</html>
